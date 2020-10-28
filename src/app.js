@@ -42,6 +42,9 @@ export default injectContext(function(props) {
                     <Route path="/planets/:index">
                         <Planets />
                     </Route>
+                    <Route path="/species/:index">
+                        <Planets />
+                    </Route>
                 </Switch>
             </div>
 
