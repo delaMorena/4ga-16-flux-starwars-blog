@@ -7,8 +7,9 @@ export default function(props) {
     const params = useParams()
     const { store, actions } = useContext(Context);
 
-    let person = store.planets[params.index] // PARA DETERMINAR EL ID DE CADA PLANETA SEGUN EL ARRAY
-    console.log(person);
+    let person = store.planets[params.index] 
+    // store.people te lleva a los personajes
+     // [params.index] te da la posicion del personaje selccionado en la card que has pinchado
     
 
     return (

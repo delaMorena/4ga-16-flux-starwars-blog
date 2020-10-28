@@ -7,10 +7,9 @@ export default function(props) {
     const params = useParams()
     const { store, actions } = useContext(Context);
 
-    let person = store.people[params.index] // PARA DETERMINAR EL ID DE CADA PERSONAJE SEGUN EL ARRAY
-    console.log(person);
-    
-
+    let person = store.people[params.index] 
+    // store.people te lleva a los personajes
+    // [params.index] te da la posicion del personaje selccionado en la card que has pinchado
     return (
         <div className="container">
             <div className="jumbotron">
