@@ -1,1 +1,25 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+#button-info {
+    width: 120px;
+}
+
+.navbar-brand {
+    background-color: black; 
+}
+.navbar-brand img {
+    width: 80px;
+    height: auto;
+}
+.card-container {
+    overflow-y: scroll; 
+    height: auto;
+    display: flex;
+}
+.card {
+    min-width: auto;
+    justify-content: space-between;
+}
+.card-body {
+    height: 250px;
+}

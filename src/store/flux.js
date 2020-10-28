@@ -33,7 +33,7 @@ export default function({ getStore, getActions, setStore }) {
                 fetch(endpoint, config).then((response) => {
                     return response.json()
                     }).then((json) => {
-                setStore({planet:json.results});
+                setStore({planets:json.results});
                 }); 
             }
                  
