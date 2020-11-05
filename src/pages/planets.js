@@ -7,7 +7,7 @@ export default function(props) {
     const params = useParams()
     const { store, actions } = useContext(Context);
 
-    let person = store.planets[params.index] 
+    let planet = store.planets[params.index] 
     // store.people te lleva a los personajes
      // [params.index] te da la posicion del personaje selccionado en la card que has pinchado
     
@@ -15,7 +15,7 @@ export default function(props) {
     return (
         <div className="container">
             <div className="jumbotron">
-                <h1>Planet: {planets.name}</h1>
+                <h1>Planet: {planet.name}</h1>
             </div>
         </div>
     )

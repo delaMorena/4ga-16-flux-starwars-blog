@@ -38,7 +38,7 @@ export default function(props) {
             <h1>Species</h1>
             <div className= "card-container">
                 {store.species.map((specie,index) => 
-                    <Card key={index} resource= "planets" id= {index}> 
+                    <Card key={index} resource= "species" id= {index}> 
                         <h5 className= "card-title">Nombre: {specie.name}</h5>
                         <p className= "card-text">Population: {specie.classification}</p>
                         <p className= "card-text">Terrain: {specie.designation}</p>

@@ -15,7 +15,7 @@ export default function(props) {
     return (
         <div className="container">
             <div className="jumbotron">
-                <h1>Planet: {species.name}</h1>
+                <h1>Specie: {specie.name}</h1>
             </div>
         </div>
     )

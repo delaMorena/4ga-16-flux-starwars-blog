@@ -15,6 +15,8 @@ import About from "./pages/about.js"
 import Contact from "./pages/contact.js"
 import Planets from "./pages/planets.js"
 import People from "./pages/people.js"
+import Species from "./pages/species.js"
+
 
 export default injectContext(function(props) {
     return (
@@ -43,7 +45,7 @@ export default injectContext(function(props) {
                         <Planets />
                     </Route>
                     <Route path="/species/:index">
-                        <Planets />
+                        <Species />
                     </Route>
                 </Switch>
             </div>
