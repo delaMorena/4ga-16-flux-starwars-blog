@@ -7,6 +7,7 @@ export default function({ getStore, getActions, setStore }) {
             species: [],
 
         },
+        favorites: [],
         actions: {
             getPeople() {
                 const store = getStore()
@@ -53,6 +54,9 @@ export default function({ getStore, getActions, setStore }) {
             }
                  
         },
+            // getFavorites() {
+
+            // },
             setLoading(status) {
                 setStore({loading: status})
             },

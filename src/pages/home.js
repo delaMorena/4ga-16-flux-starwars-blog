@@ -14,7 +14,7 @@ export default function(props) {
     },[]) 
 
     return (
-        <div className="container">
+        <div className="container mt-5">
             <h1 className= "title">Character</h1>
             <div className= "card-container">
                 {store.people.map((person,index) => 

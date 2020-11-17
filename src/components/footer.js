@@ -7,9 +7,8 @@ export default function(props) {
 
     return (
         <footer className="footer">
-            <div className="container">
+            <div className="container mt-5">
                 <p>&copy; 2020. Todos los derechos reservados.</p>
-                <span>Estado: {store.loading ? "Cargando...":"Cargado"}</span>
             </div>
         </footer>
     )

@@ -17,6 +17,7 @@ export default function(props) {
                 <div className="card-body">
                     {props.children}    
                     <Link to={path} className="btn btn-outline-primary" id="button-info">Learn More!</Link>
+                    <button type="button" className="btn heart"><i className="far fa-heart"></i></button>
                 </div>           
         </div>
     )
