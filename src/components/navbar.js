@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import  Favorite  from "./favorite.js"
 
 export default function(props) {
     return (
@@ -12,14 +13,8 @@ export default function(props) {
                     </Link>
                     
                     </span>
-                    <div className="dropdown">
-                        <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Favorites
-                        </button>
-                            <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a className="dropdown-item" href="#">Action</a>
-                            </div>
-                    </div>
+
+                    <Favorite />
                 </div>
             
         </nav>

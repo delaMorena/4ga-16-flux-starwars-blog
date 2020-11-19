@@ -5,9 +5,9 @@ export default function({ getStore, getActions, setStore }) {
             people:[],
             planets: [],
             species: [],
-
+            favorites: new Set([])
+            // new Set([]) elimino los duplicados de favorites.
         },
-        favorites: [],
         actions: {
             getPeople() {
                 const store = getStore()
@@ -54,9 +54,22 @@ export default function({ getStore, getActions, setStore }) {
             }
                  
         },
-            // getFavorites() {
+            getFavorites() {
+                const store = getStore()
+                return [...store.favorites]
+                //[... convierte un set en un array] lo devuelve como elemento coma elemento coma elemento
+            },
 
-            // },
+            addFavorites(favorite_name) {
+                const store = getStore()
+                store.favorites.add(favorite_name)
+                //no va con push porque no es un array, es un set y no puede ir con push
+            },
+
+            deleteFavorites(favorite_name){
+                const store = getStore()
+                store.favorites.delete(favorite_name)
+            },
             setLoading(status) {
                 setStore({loading: status})
             },
