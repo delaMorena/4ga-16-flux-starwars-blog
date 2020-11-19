@@ -7,6 +7,7 @@ export default function(props) {
     const {store, actions} = useContext(Context);
     const handleClick = (event) => {
          actions.addFavorites(props.name)
+         console.log('props.name. ', props.name)
      }
      //añadir a favorite via props ( en cards que es dondse se renderiza <Favorites />)
     return (

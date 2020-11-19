@@ -6,12 +6,13 @@ import { Context } from "../store/index.js";
 export default function(props) {
 
     const { store, actions } = useContext(Context);
-    const [listFav, setListFav] = useState([])
+    const [listFav, setListFav] = useState(['R2D2'])
 
     useEffect(()=> {
         console.log("listFav: ", listFav);
         setListFav(actions.getFavorites());
-        console.log("listFav: ", listFav)
+        console.log("listFav después de setListFav: ", listFav);
+        
 
     },[])
 
@@ -22,9 +23,10 @@ export default function(props) {
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" >
             {listFav.map( (fav, index) =>  { 
-                return (<a className="dropdown-item" href="#">{fav}</a>)
+                return (<a className="dropdown-item" key= 'index' href="#">Luck Skywalker</a>)
             })
-            }     
+            }   
+            <h6 className="dropdown-item text-secondary" key= 'index' href="#">{listFav}</h6>  
             </div>
         </div>
     )  

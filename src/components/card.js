@@ -10,7 +10,7 @@ export default function(props) {
     const { store, actions } = useContext(Context);
     
     let path = "/"+props.resource+"/"+props.id; 
-    console.log(path);
+    // console.log(path);
     let imgRandom = Math.floor((Math.random()*1000)+1)
     let pathImg = "https://picsum.photos/400/200?random="+imgRandom;
      
