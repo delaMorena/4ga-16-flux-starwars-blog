@@ -64,11 +64,13 @@ export default function({ getStore, getActions, setStore }) {
                 const store = getStore()
                 store.favorites.add(favorite_name)
                 //no va con push porque no es un array, es un set y no puede ir con push
+                setStore({favorites: store.favorites});
             },
 
             deleteFavorites(favorite_name){
                 const store = getStore()
                 store.favorites.delete(favorite_name)
+                setStore({favorites: store.favorites});
             },
             setLoading(status) {
                 setStore({loading: status})

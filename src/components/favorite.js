@@ -6,15 +6,13 @@ import { Context } from "../store/index.js";
 export default function(props) {
 
     const { store, actions } = useContext(Context);
-    const [listFav, setListFav] = useState(['R2D2'])
+    
 
     useEffect(()=> {
-        console.log("listFav: ", listFav);
-        setListFav(actions.getFavorites());
-        console.log("listFav después de setListFav: ", listFav);
-        
-
-    },[])
+        actions.getFavorites();
+        console.log('store.favorites desde favorites.js: ', store.favorites)
+    },[store.favorites])
+    // renderiza solo cuando cambie store.favorites. Si el array está vacío se dice que no tiene dependencias
 
     return (
         <div className="dropdown">
@@ -22,11 +20,12 @@ export default function(props) {
                 Favorites
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" >
-            {listFav.map( (fav, index) =>  { 
-                return (<a className="dropdown-item" key= 'index' href="#">Luck Skywalker</a>)
+            {actions.getFavorites().map( (fav, index) =>  { 
+            return (<a onClick = {()=> actions.deleteFavorites(fav)} 
+            
+            className="dropdown-item" key= {index} href="#">{fav}</a>)
             })
-            }   
-            <h6 className="dropdown-item text-secondary" key= 'index' href="#">{listFav}</h6>  
+            }     
             </div>
         </div>
     )  
