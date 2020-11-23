@@ -26,16 +26,12 @@ export default function(props) {
             </div>
             <div class="divider bg-danger"></div>
             <div className="row d-flex ml-5">
-                <div className= "col-2 text-danger">Name {specie.name}</div>
-                <div className= "col-2 text-danger">Average Height {specie.average_height}</div>
-                <div className= "col-2 text-danger">Average Lifespan {specie.average_lifespan}</div>
-                <div className= "col-2 text-danger">Classification {specie.classification}</div>
-                <div className= "col-2 text-danger">
-                    Homeworld {specie.homeworld}
-                    {/* <Link to= ></Link> */}
-                    </div>
-                <div className= "col-2 text-danger">Eye Colors {specie.eye_colors}</div>
-                <div className= "col-2 text-danger">Language {specie.language}</div>
+                <div className= "col-2 text-danger">Name:  {specie.name}</div>
+                <div className= "col-2 text-danger">Average Height:  {specie.average_height}</div>
+                <div className= "col-2 text-danger">Average Lifespan:  {specie.average_lifespan}</div>
+                <div className= "col-2 text-danger">Classification:  {specie.classification}</div>
+                <div className= "col-2 text-danger">Eye Colors:  {specie.eye_colors}</div>
+                <div className= "col-2 text-danger">Language:  {specie.language}</div>
             </div>
         </div>
     )

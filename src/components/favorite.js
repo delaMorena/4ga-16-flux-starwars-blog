@@ -21,12 +21,18 @@ export default function(props) {
             </button>
             <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" >
             {actions.getFavorites().map( (fav, index) =>  { 
-            return (<a onClick = {()=> actions.deleteFavorites(fav)} 
-            
-            className="dropdown-item" key= {index} href="#">{fav}</a>)
+                return (
+                    <a className="dropdown-item" key={index} href="#">{fav}
+                        <button onClick={() => actions.deleteFavorites(fav)} type="button" className="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </a>
+                )
             })
             }     
             </div>
         </div>
     )  
 }
+
+

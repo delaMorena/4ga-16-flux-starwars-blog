@@ -24,12 +24,12 @@ export default function(props) {
             </div>
             <div class="divider bg-danger"></div>
             <div className="row d-flex ml-5">
-                <div className= "col-2 text-danger">Name {person.name}</div>
-                <div className= "col-2 text-danger">Birth Year {person.birth_year}</div>
-                <div className= "col-2 text-danger">Gender {person.gender}</div>
-                <div className= "col-2 text-danger">Height {person.height}</div>
-                <div className= "col-2 text-danger">Skin Color {person.skin_color}</div>
-                <div className= "col-2 text-danger">Eye Color {person.eye_color}</div>
+                <div className= "col-2 text-danger">Name: {person.name}</div>
+                <div className= "col-2 text-danger">Birth Year: {person.birth_year}</div>
+                <div className= "col-2 text-danger">Gender: {person.gender}</div>
+                <div className= "col-2 text-danger">Height: {person.height}</div>
+                <div className= "col-2 text-danger">Skin Color: {person.skin_color}</div>
+                <div className= "col-2 text-danger">Eye Color: {person.eye_color}</div>
             </div>
         </div>
         
